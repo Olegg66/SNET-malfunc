@@ -1,1 +1,8 @@
-
+astropy==7.0.1
+dtaidistance==2.3.13
+fastdtw==0.3.4
+matplotlib==3.8.2
+pytmd==2.2.3
+scikit_learn==1.4.0
+statsmodels==0.14.1
+torch==2.6.0
