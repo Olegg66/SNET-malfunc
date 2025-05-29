@@ -1,4 +1,8 @@
-# Detection of Malfunctions in the Operation of S-net Seafloor Observatories Using Machine Learning
+# Detection of Malfunctions in the Operation of S-net Seafloor Observatories Using ML
+
+# Signal examples for a normal and a malfunctioning stations #
+<img src="./example.png" width="800"/>
+
 ## Annotation:
 The goal of this project is to develop a model for automatically detecting faulty pressure sensors in the S-net seafloor observatory network. The main issue is that sometimes sensors malfunction and begin transmitting chaotic noise instead of actual ocean bottom pressure data. As a result, the accuracy of tsunami wave height predictions based on offshore pressure measurements decreases. By identifying and excluding faulty stations, we aim to solve this problem.
 
