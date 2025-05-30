@@ -1,6 +1,6 @@
 # Detection of Malfunctions in the Operation of S-net Seafloor Observatories Using ML
 
-# Signal examples for a normal and a malfunctioning stations #
+## Signal examples for a normal and a malfunctioning stations #
 <img src="./example.png" width="800"/>
 
 ## Annotation:
