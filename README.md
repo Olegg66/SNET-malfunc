@@ -1,6 +1,6 @@
 # Detection of Malfunctions in the Operation of S-net Seafloor Observatories Using ML
 
-# Signal examples for a normal and a malfunctioning stations #
+## Signal examples for a normal and a malfunctioning stations #
 <img src="./example.png" width="800"/>
 
 ## Annotation:
@@ -64,7 +64,7 @@ The function returns a list of sensor indices included in the test set. All rema
 
 ### Model training:
 
-In the last two cells, the final data processing and model training are performed. The original 14-day dataset is divided into 4 segments of 84 hours (3.5 days) each. Each segment is treated as a separate sample. All samples for each method are combined into one array of length 4N, where N is the number of sensors in the original dataset. Samples with indices k, k+N, k+2N, and k+3N correspond to the same station but over different time intervals.
+In the last two cells, the final data processing and model training are performed. The original 14-day dataset is divided into 4 segments of 84 hours (3.5 days) each. The arrays `start` and `end` define the initial and final points of the samples during segmentation. If you plan to change the length of the input data or the size of the samples, it is strongly recommended to allocate samples of equal length. Otherwise, the comparison of the absolute values of their reconstruction errors, as provided by the base classifiers, will be incorrect. Additionally, it is not recommended to make the sample length less than 80 hours, as this leads to a noticeable decline in the accuracy of most base classifiers. Each segment is treated as a separate sample. All samples for each method are combined into one array of length 4N, where N is the number of sensors in the original dataset. Samples with indices k, k+N, k+2N, and k+3N correspond to the same station but over different time intervals.
 
 The list of malfunctioning stations `worst` is similarly replicated 4 times, each with an offset of N, to account for the fact that if a station is malfunctioning, it remains so across all time segments.
 
