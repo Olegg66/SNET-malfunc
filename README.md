@@ -19,7 +19,11 @@ The final.ipynb and other notebook files have been run with python 3.12.0 on Win
 
 One part of the code requires the use of the TPXO regional tidal model for the Pacific Ocean. Due to the large file size, it cannot be hosted on GitHub. Therefore, please download the model in advance from the website (https://www.tpxo.net/regional, Pacific Ocean) and place the extracted folder `PO` with its contents into the repository.
 
-The list of required libraries and their versions is provided in requirements.txt.
+The list of required libraries and their versions is provided in requirements.txt. Just run in your .ipynb this cell:
+
+```Python
+!pip install -r requirements.txt
+```
 
 ## Model execution guide:
 
