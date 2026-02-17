@@ -1,10 +1,10 @@
 # Detection of Malfunctions in the Operation of S-net Seafloor Observatories Using ML
 
+## Annotation:
+The goal of this project is to develop a model for automatically detecting faulty pressure sensors in the S-net seafloor observatory network. The main issue is that sometimes sensors malfunction and begin transmitting chaotic noise instead of actual ocean bottom pressure data. As a result, the accuracy of tsunami wave height predictions based on offshore pressure measurements decreases. By identifying and excluding faulty stations, using physics informed ML algorithms, we aim to solve this problem.
+
 ## Signal examples for a normal and a malfunctioning stations #
 <img src="./example.png" width="800"/>
-
-## Annotation:
-The goal of this project is to develop a model for automatically detecting faulty pressure sensors in the S-net seafloor observatory network. The main issue is that sometimes sensors malfunction and begin transmitting chaotic noise instead of actual ocean bottom pressure data. As a result, the accuracy of tsunami wave height predictions based on offshore pressure measurements decreases. By identifying and excluding faulty stations, we aim to solve this problem.
 
 ## Data:
 This repository includes 14 days of pressure registration data from February 22 to March 8, 2025, for 256 pressure sensors in the `data` folder. The file `channels.tbl.20250303` contains a table with information about the sensors (name, coordinates, depth, etc.). The data is provided by the NIED organization: https://hinetwww11.bosai.go.jp/auth/oc/. The raw data is provided at a frequency of 10 Hz, which is excessive for our purposes. Therefore, the data fed into the model is resampled to a frequency of 1 point per hour by averaging.
@@ -19,7 +19,11 @@ The final.ipynb and other notebook files have been run with python 3.12.0 on Win
 
 One part of the code requires the use of the TPXO regional tidal model for the Pacific Ocean. Due to the large file size, it cannot be hosted on GitHub. Therefore, please download the model in advance from the website (https://www.tpxo.net/regional, Pacific Ocean) and place the extracted folder `PO` with its contents into the repository.
 
-The list of required libraries and their versions is provided in requirements.txt.
+The list of required libraries and their versions is provided in requirements.txt. Just run in your .ipynb this cell:
+
+```Python
+!pip install -r requirements.txt
+```
 
 ## Model execution guide:
 
